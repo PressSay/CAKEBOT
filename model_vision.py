@@ -15,8 +15,8 @@ class YOLOWebcamDetector:
         self.cap = cv2.VideoCapture(0)
         self.models = [
             # YOLO("/home/lpq/Projects/LuanVan/Vision/Tan Hue Vien New/yolov8n.pt"),
-            YOLO("/home/lpq/Projects/LuanVan/Vision/Yolo/BanhConLai/V8/runs/detect/train/weights/best.pt"),
-            YOLO('/home/lpq/Projects/LuanVan/Vision/Yolo/BanhPia/V8/runs/detect/train/weights/best.pt')
+            YOLO("YOLO/BanhConLaiV8.pt"),
+            YOLO('YOLO/BanhPiaV8.pt')
         ]
         for i in range(len(self.models)):
             self.models[i].to('cuda')
@@ -32,7 +32,7 @@ class YOLOWebcamDetector:
         self.max_frames = 30
         self.decay_rate = 5
         self.exist_system = [1]
-        self.font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 32)
+        self.font = ImageFont.truetype("YOLO/DejaVuSans-Bold.ttf", 32)
         self.img = None
         self.lock = threading.Lock()
         self.threading_vision = None
