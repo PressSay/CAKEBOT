@@ -7,7 +7,7 @@ import platform
 from window_exit import ToplevelWindowExit
 from window_vision import ToplevelWindowModelVision
 
-app_logo = customtkinter.CTkImage(light_image=Image.open("/home/lpq/Downloads/HinhAnhThamKhao/GUI.png"),
+app_logo = customtkinter.CTkImage(light_image=Image.open("Resource/Images/GUI.png"),
                                   size=(50, 50))
 
 customtkinter.set_appearance_mode("Light")
@@ -40,12 +40,12 @@ class InputFrame(customtkinter.CTkFrame):
         self.main_button_1.grid(row=1, column=1, padx=(20, 0), pady=(20, 20), sticky="nsew")
 
         self.micro_icon = customtkinter.CTkImage(
-            light_image=Image.open("/home/lpq/PycharmProjects/TkinterBegin/microphone.png"),
-            dark_image=Image.open("/home/lpq/PycharmProjects/TkinterBegin/microphone.png"),
+            light_image=Image.open("Resource/Images/microphone.png"),
+            dark_image=Image.open("Resource/Images/microphone.png"),
             size=(20, 20))
         self.micro_icon_active = customtkinter.CTkImage(
-            light_image=Image.open("/home/lpq/PycharmProjects/TkinterBegin/microphone_active.png"),
-            dark_image=Image.open("/home/lpq/PycharmProjects/TkinterBegin/microphone_active.png"),
+            light_image=Image.open("Resource/Images/microphone_active.png"),
+            dark_image=Image.open("Resource/Images/microphone_active.png"),
             size=(20, 20))
         self.listen_button = customtkinter.CTkButton(self, text="", image=self.micro_icon, command=self.micro_func)
         self.listen_button.grid(row=1, column=2, padx=(20, 10), pady=(20, 20), sticky="nsew")

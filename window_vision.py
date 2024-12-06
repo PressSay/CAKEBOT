@@ -26,7 +26,7 @@ class ToplevelWindowModelVision(customtkinter.CTkToplevel):
 
         self.model_vision_ui = customtkinter.CTkLabel(master=self, text="", corner_radius=5,
                                                       fg_color=["white", "black"])
-        self.img_convert = Image.open("/home/lpq/Pictures/Avastar/logoAvastar.jpg").resize((640, 480))
+        self.img_convert = Image.open("Resource/Images/camera-photo-icon-1507034122.png").resize((640, 480))
         self.model_vision_imgtk = customtkinter.CTkImage(
             self.img_convert, size=(self.model_vision_ui.winfo_width(), self.model_vision_ui.winfo_height()))
         self.model_vision_ui.configure(image=self.model_vision_imgtk, width=500, height=500)
